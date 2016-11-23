@@ -2,6 +2,7 @@ void setup()
 {
   fullScreen();
   cockpit = new Cockpit_outline();
+  arrows = new Arrows();
   pg = createGraphics(width, height);
   bgimage = loadImage("maxresdefault.jpg");
   radar = new Radar(width-100,height-90,70,0.05f);
@@ -15,6 +16,7 @@ PGraphics pg;
 PImage bgimage;
 
 Cockpit_outline cockpit;
+Arrows arrows;
 Crosshair crosshair;
 Radar radar;
 
@@ -22,6 +24,7 @@ void draw()
 {
   image(bgimage,0,0);
   cockpit.display();
+  arrows.display();
   radar.update();
   radar.render();
   crosshair.update();
