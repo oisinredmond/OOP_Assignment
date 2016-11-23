@@ -1,6 +1,6 @@
 void setup()
 {
-  fullScreen(P3D);  
+  fullScreen(OPENGL);  
   cockpit = new Cockpit_outline();
   arrows = new Arrows();
   radar = new Radar(width-100,height-90,70,0.05f);
