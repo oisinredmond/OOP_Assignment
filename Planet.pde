@@ -16,6 +16,8 @@ class Planet
   
   void render()
   {
-
+    stroke(255,0,0);
+    fill(0);
+    rect((width/2)-100,height-140,200,130);
   }
 }
