@@ -5,13 +5,12 @@ class Planet
   float pz;
   float radius;
   
-  Planet(float x,float y,float z,float radius,PImage earth)
+  Planet(float x,float y,float z,float radius)
   {
     px=x;
     py=y;
     pz=z;
     this.radius = radius;
-    this.earth = earth;
   }
   
   void render()
