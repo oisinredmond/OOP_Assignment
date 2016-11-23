@@ -1,8 +1,7 @@
 class Cockpit_outline
 {
-  void display()
+  void render()
   {
-    smooth(2);
     stroke(200);
     strokeWeight(1);
     fill(44,45,45);

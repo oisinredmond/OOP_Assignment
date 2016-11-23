@@ -1,10 +1,10 @@
 class Arrows
 {
-  void display()
+  void render()
   {
     stroke(255,0,0);
     strokeWeight(2);
-    if(frameCount%30<=10)
+    if(frameCount%60<=20)
     {
       fill(0,200,255);
     }else{noFill();}
@@ -18,7 +18,7 @@ class Arrows
     vertex(width/2 +170, height-200);
     endShape(CLOSE);
     
-    if(frameCount%30<=20 && frameCount%30>10)
+    if(frameCount%60<=40 && frameCount%60>20)
     {
       fill(0,200,255);
     }
@@ -33,7 +33,7 @@ class Arrows
     vertex(width/2 +120, height-245);
     endShape(CLOSE);
    
-   if(frameCount%30<=29 && frameCount%30>20)
+   if(frameCount%60<=59 && frameCount%60>40)
     {
       fill(0,200,255);
     }
