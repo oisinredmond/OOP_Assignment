@@ -36,13 +36,12 @@ void draw()
   image(bgimage,0,0);
   cockpit.render();
   fuelbar.render();
-  throttle.render();
-  
   arrows.render();
   radar.update();
   radar.render();
   crosshair.update();
   crosshair.render();
+  throttle.render();
   planet.render();
   planet.planetInfo();
 }
