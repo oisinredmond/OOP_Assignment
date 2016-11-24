@@ -31,4 +31,22 @@ class Planet
     shape(earth,0,0);
     popMatrix();
   }
+  
+  void planetInfo()
+  {
+    if(mouseX > (width/2)-100 && mouseX< (width/2)+100 && mouseY>(height-140) && mouseY<(height-10))
+    {
+      fill(255,0,0);
+      stroke(255,0,0);
+      pushMatrix();
+      ellipse(mouseX,mouseY,3,3);
+      line(mouseX,mouseY,mouseX+30,mouseY);
+      line(mouseX+30,mouseY,mouseX+60,mouseY-20);
+      line(mouseX+60,mouseY-20,mouseX+80,mouseY-40);
+      fill(0);
+      rect(mouseX+80,mouseY-20,200,100);
+      popMatrix();
+    }
+  }
+}
 }
