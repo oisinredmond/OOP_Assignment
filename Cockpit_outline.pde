@@ -4,7 +4,7 @@ class Cockpit_outline
   {
     stroke(200);
     strokeWeight(1);
-    fill(44,45,45);
+    fill(45);
      
     beginShape();
     vertex(0,0);

@@ -38,6 +38,7 @@ class Arrows
       fill(0,200,255);
     }
     else{noFill();}
+    
     beginShape();
     vertex(width/2,height-300);
     vertex(width/2-90,height-285);

@@ -32,7 +32,6 @@ Fuelbar fuelbar;
 void draw()
 {
   image(bgimage,0,0);
-  planet.planetInfo();
   cockpit.render();
   fuelbar.render();
   arrows.render();
@@ -41,4 +40,5 @@ void draw()
   crosshair.update();
   crosshair.render();
   planet.render();
+  planet.planetInfo();
 }
