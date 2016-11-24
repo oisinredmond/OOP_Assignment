@@ -10,8 +10,8 @@ void setup()
   radar = new Radar(width-100,height-90,70,0.05f);
   crosshair = new Crosshair(width/2.0f,height/2.0f,60,0.05);
   planet = new Planet(width/2,height-80,0,50);
-  fuelbar = new Fuelbar(300,50,80,height-500);
-  throttle = new Throttle(300,50,width-80,height-500);
+  fuelbar = new Fuelbar(300,50,60,height-450);
+  throttle = new Throttle(300,50,width-100,height-550);
   
   pg = createGraphics(width, height);
   bgimage = loadImage("maxresdefault.jpg");  

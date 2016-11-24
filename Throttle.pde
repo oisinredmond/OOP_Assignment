@@ -18,5 +18,9 @@ class Throttle
     stroke(255,0,0);
     noFill();
     rect(posx,posy,bar_width,bar_height);
+    
+    textSize(25);
+    fill(0,255,0);
+    text("THROTTLE",posx-30,posy-10);
   }
 }
