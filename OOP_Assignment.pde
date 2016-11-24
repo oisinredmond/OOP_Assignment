@@ -37,6 +37,7 @@ void draw()
   cockpit.render();
   fuelbar.render();
   throttle.render();
+  
   arrows.render();
   radar.update();
   radar.render();
