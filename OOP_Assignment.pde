@@ -11,6 +11,7 @@ void setup()
   crosshair = new Crosshair(width/2.0f,height/2.0f,60,0.05);
   planet = new Planet(width/2,height-80,0,50);
   fuelbar = new Fuelbar(300,50,80,height-500);
+  throttle = new Throttle(300,50,width-80,height-500);
   
   pg = createGraphics(width, height);
   bgimage = loadImage("maxresdefault.jpg");  
@@ -28,12 +29,14 @@ Crosshair crosshair;
 Radar radar;
 Planet planet;
 Fuelbar fuelbar;
+Throttle throttle;
 
 void draw()
 {
   image(bgimage,0,0);
   cockpit.render();
   fuelbar.render();
+  throttle.render();
   arrows.render();
   radar.update();
   radar.render();
