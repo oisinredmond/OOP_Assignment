@@ -26,7 +26,7 @@ class Fuelbar
     }
     
     textSize(25);
-    fill(255,0,0);
+    fill(0,255,0);
     text("FUEL",posx,posy + bar_height + 20);
   }
 }

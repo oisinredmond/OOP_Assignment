@@ -53,7 +53,6 @@ class Planet
       line(mouseX+30,mouseY,mouseX+60,mouseY-20);
       line(mouseX+60,mouseY-20,mouseX+80,mouseY-20);
       rect(mouseX+80,mouseY-60,200,100);
-      fill(0);
     }
   }
 }
