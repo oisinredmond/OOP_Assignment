@@ -74,6 +74,10 @@ class Planet_menu
       if(mousePressed)
       {
         background = loadImage("maxresdefault.jpg");
+        planet_name = "Earth";
+        planet_pop = "7 Billion";
+        planet_diam = "12,742km";
+        planet_hab = "100%";
       }
     }
     
@@ -88,6 +92,10 @@ class Planet_menu
       if(mousePressed)
       {
         background = loadImage("mars_bg.jpg");
+        planet_name = "Mars";
+        planet_pop = "10 Million";
+        planet_diam = "6,779 km";
+        planet_hab = "20%";
       }
     }
     
@@ -102,6 +110,10 @@ class Planet_menu
       if(mousePressed)
       {
         background = loadImage("jupiter-1.jpg");
+        planet_name = "Jupiter";
+        planet_pop = "0";
+        planet_diam = "139,822 km";
+        planet_hab = "0%";
       }
     }
   }
