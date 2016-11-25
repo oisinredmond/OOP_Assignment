@@ -54,6 +54,11 @@ class Planet_menu
     translate(px + 200,py,0);
     jupiter = createShape(SPHERE,radius);
     jupiter.setTexture(jupitertexture);
+    jupiter.rotateX(-0.5);
+    if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
+    {
+      jupiter.rotateY(mouseX*(-0.05));
+    }
     shape(jupiter);
     popMatrix();
   }

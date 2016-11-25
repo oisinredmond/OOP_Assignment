@@ -13,7 +13,7 @@ void setup()
   fuelbar = new Fuelbar(300,50,60,height-450);
   throttle = new Throttle(300,50,width-100,height-550);
   speedometer = new Speedometer(width/2 -500,height -100,150,70);
-  planet_menu = new Planet_menu(width/2,85,0,50);
+  planet_menu = new Planet_menu(width/2,80,0,50);
   
   pg = createGraphics(width, height);
   bg_earth = loadImage("maxresdefault.jpg");  
