@@ -13,6 +13,7 @@ void setup()
   fuelbar = new Fuelbar(300,50,60,height-450);
   throttle = new Throttle(300,50,width-100,height-550);
   speedometer = new Speedometer(width/2 -500,height -100,150,70);
+  planet_menu = new Planet_menu();
   
   pg = createGraphics(width, height);
   bg_earth = loadImage("maxresdefault.jpg");  
@@ -33,6 +34,7 @@ Planet planet;
 Fuelbar fuelbar;
 Throttle throttle;
 Speedometer speedometer;
+Planet_menu planet_menu;
 
 void draw()
 {
@@ -49,4 +51,5 @@ void draw()
   planet.planetInfo();
   speedometer.render();
   speedometer.update();
+  planet_menu.render();
 }
