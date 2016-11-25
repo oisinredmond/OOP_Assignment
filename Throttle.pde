@@ -39,7 +39,7 @@ class Throttle
        +20 && mouseY > posy && mouseY < posy + bar_height)
     {
       slidery = mouseY -5;
-      ship_speed = map(mouseY,bar_height+posy,posy,0,1000);
+      ship_speed = map(slidery,bar_height+posy,posy,0,1000);
     }
     
     textSize(25);

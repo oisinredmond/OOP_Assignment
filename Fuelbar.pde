@@ -23,7 +23,7 @@ class Fuelbar
     rect(posx,posy,bar_width,bar_height);
     textSize(25);
     fill(0,255,0);
-    text("FUEL",posx + bar_width/2,posy + bar_height + 20);
+    text("FUEL",posx,posy + bar_height + 20);
     
     fuel_loss = map(ship_speed,0,1000,0,1);
     
@@ -37,11 +37,11 @@ class Fuelbar
         text("FUEL EMPTY",(width/2) - 50,height/2 - 40);
     }
     
-    for(float i = 0; i <fuel_height; i++)
+    for(float i = fuel_height; i > 0; i--)
     {
       float j = map(i,0,bar_height,0,255);
       stroke(255,j,0);
-      line(posx,(bar_height*2) - i + 16,posx + bar_width,(bar_height*2) - i + 16);
+      line(posx,posy+bar_height - i,posx + bar_width,posy + bar_height - i);
     }
   }
 }

@@ -116,7 +116,7 @@ class Planet_menu
       if(mousePressed)
       {
           background = jupiterbg;
-          globetexture = loadImage("2.jpg");
+          globetexture = jupitertexture;
           planet_name = "Jupiter";
           planet_pop = "0";
           planet_diam = "6,779 km";

@@ -10,8 +10,8 @@ void setup()
   radar = new Radar(width-100,height-90,70,0.05f);
   crosshair = new Crosshair(width/2.0f,height/2.0f,60,0.05);
   planet = new Planet(width/2,height-80,0,50);
-  fuelbar = new Fuelbar(300,50,60,height-450);
-  throttle = new Throttle(300,50,width-100,height-550);
+  fuelbar = new Fuelbar(300,50,60,height-(height/2));
+  throttle = new Throttle(300,50,width-100,height-(height/2)-100);
   speedometer = new Speedometer(width/2 -500,height -100,150,70);
   planet_menu = new Planet_menu(width/2,80,0,50);
   
