@@ -27,9 +27,17 @@ class Planet_menu
     
     pushMatrix();
     noStroke();
-    translate(px,py,5);
+    translate(px - 200,py,0);
     earth = createShape(SPHERE,radius);
     earth.setTexture(earthtexture);
+    shape(earth);
+    popMatrix();
+    pushMatrix();
+    noStroke();
+    translate(px,py,0);
+    mars = createShape(SPHERE,radius);
+    mars.setTexture(marstexture);
+    shape(mars);
     popMatrix();
   }
 }
