@@ -71,5 +71,14 @@ class Planet_menu
       stroke(0,255,0);
       text("EARTH",(width/2)-235,190);
     }
+    
+    if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
+    {
+      ellipse(width/2,140,3,3);
+      line(width/2,140,width/2,170);
+      rect((width/2)-40,170,80,25);
+      stroke(0,255,0);
+      text("MARS",(width/2)-35,190);
+    }
   }
 }
