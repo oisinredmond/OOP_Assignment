@@ -7,6 +7,9 @@ class Planet_menu
   PImage earthtexture = loadImage("earthmap1k.jpg");
   PImage marstexture = loadImage("mars_map.jpg");
   PImage jupitertexture = loadImage("2.jpg");
+  PImage earthbg = loadImage("maxresdefault.jpg");
+  PImage marsbg = loadImage("mars_bg.jpg");
+  PImage jupiterbg = loadImage("jupiter-1.jpg");
   PShape earth;
   PShape mars;
   PShape jupiter;
@@ -73,7 +76,8 @@ class Planet_menu
       
       if(mousePressed)
       {
-        background = loadImage("maxresdefault.jpg");
+        background = earthbg;
+        globetexture = earthtexture;
         planet_name = "Earth";
         planet_pop = "7 Billion";
         planet_diam = "12,742km";
@@ -91,7 +95,8 @@ class Planet_menu
       
       if(mousePressed)
       {
-        background = loadImage("mars_bg.jpg");
+        background = marsbg;
+        globetexture = marstexture;
         planet_name = "Mars";
         planet_pop = "10 Million";
         planet_diam = "6,779 km";
@@ -107,13 +112,15 @@ class Planet_menu
       stroke(0,255,0);
       text("JUPITER",(width/2)+160,190);
       
+
       if(mousePressed)
       {
-        background = loadImage("jupiter-1.jpg");
-        planet_name = "Jupiter";
-        planet_pop = "0";
-        planet_diam = "139,822 km";
-        planet_hab = "0%";
+          background = jupiterbg;
+          globetexture = loadImage("2.jpg");
+          planet_name = "Jupiter";
+          planet_pop = "0";
+          planet_diam = "6,779 km";
+          planet_hab = "0%";
       }
     }
   }

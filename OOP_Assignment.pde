@@ -17,6 +17,7 @@ void setup()
   
   pg = createGraphics(width, height);
   background = loadImage("maxresdefault.jpg");  
+  globetexture = loadImage("earthmap1k.jpg");
   
   smooth();
   background(0);
@@ -24,6 +25,7 @@ void setup()
 
 PGraphics pg;
 PImage background;
+PImage globetexture;
 float ship_speed = 500;
 
 String planet_name = "Earth";

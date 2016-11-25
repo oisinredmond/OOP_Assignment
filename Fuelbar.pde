@@ -29,16 +29,12 @@ class Fuelbar
     
     if(fuel_height > 0)
     {
-      fuel_height = fuel_height - (0.3*fuel_loss);
+      fuel_height = fuel_height - (0.1*fuel_loss);
     }
-    else
+    else if(frameCount % 120 <= 60)
     {
-      if(frameCount % 120 <= 60)
-      {
-        textAlign(CENTER);
         fill(255,0,0);
-        text("FUEL EMPTY",width/2,height/2 - 40);
-      }
+        text("FUEL EMPTY",(width/2) - 50,height/2 - 40);
     }
     
     for(float i = 0; i <fuel_height; i++)
