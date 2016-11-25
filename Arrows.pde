@@ -1,10 +1,31 @@
 class Arrows
 {
+  float k;
+  float j;
+  
   void render()
   {
     stroke(255,0,0);
     strokeWeight(2);
-    if(frameCount%60<=20)
+    if(ship_speed > 800.0)
+    {
+      k = 15;
+      j = 3;
+    }else if(ship_speed > 500.0 && ship_speed < 800.0)
+    {
+      k = 30;
+      j = 10;
+    }else if(ship_speed > 200.0 && ship_speed < 500.0)
+    {
+      k = 60;
+      j = 20;
+    }else if(ship_speed >0.0 && ship_speed < 200.0)
+    {
+      k = 120;
+      j = 40;
+    }
+    
+    if(frameCount % k <= j)
     {
       fill(0,200,255);
     }else{noFill();}
@@ -18,7 +39,7 @@ class Arrows
     vertex(width/2 +170, height-200);
     endShape(CLOSE);
     
-    if(frameCount%60<=40 && frameCount%60>20)
+    if(frameCount % k<= j*2 && frameCount % k >j)
     {
       fill(0,200,255);
     }
@@ -33,7 +54,7 @@ class Arrows
     vertex(width/2 +120, height-245);
     endShape(CLOSE);
    
-   if(frameCount%60<=59 && frameCount%60>40)
+   if(frameCount % k <= (j*3) - 1 && frameCount % k > j*2)
     {
       fill(0,200,255);
     }
