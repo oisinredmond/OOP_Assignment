@@ -4,7 +4,7 @@ class Planet
   float py;
   float pz;
   float radius;
-  PShape earth;
+  PShape globe;
   PImage earthtexture = loadImage("earthmap1k.jpg");
   
   Planet(float x,float y,float z,float radius)
@@ -23,13 +23,13 @@ class Planet
     pushMatrix();
     noStroke();
     translate(px,py,5);
-    earth = createShape(SPHERE,radius);
-    earth.setTexture(earthtexture);
+    globe = createShape(SPHERE,radius);
+    globe.setTexture(earthtexture);
     if(mouseX > (width/2)-100 && mouseX< (width/2)+100 && mouseY>(height-140) && mouseY<(height-10))
     {
-      earth.rotateY(mouseX*(-0.04));
+      globe.rotateY(mouseX*(-0.04));
     }
-    shape(earth,0,0);
+    shape(globe,0,0);
     popMatrix();
   }
   

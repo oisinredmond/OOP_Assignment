@@ -15,14 +15,14 @@ void setup()
   speedometer = new Speedometer(width/2 -500,height -100,150,70);
   
   pg = createGraphics(width, height);
-  bgimage = loadImage("maxresdefault.jpg");  
+  bg_earth = loadImage("maxresdefault.jpg");  
   
   smooth();
   background(0);
 }
 
 PGraphics pg;
-PImage bgimage;
+PImage bg_earth;
 float ship_speed = 500;
 
 Cockpit_outline cockpit;
@@ -36,7 +36,6 @@ Speedometer speedometer;
 
 void draw()
 {
-  image(bgimage,0,0);
   textAlign(LEFT);
   cockpit.render();
   fuelbar.render();
