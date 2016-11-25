@@ -22,6 +22,7 @@ void setup()
 
 PGraphics pg;
 PImage bgimage;
+float ship_speed = 500;
 
 Cockpit_outline cockpit;
 Arrows arrows;

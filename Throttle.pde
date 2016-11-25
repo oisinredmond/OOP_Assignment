@@ -6,16 +6,16 @@ class Throttle
   int posx;
   int posy;
   float sliderx = width-125;
-  float slidery = height - 300;
+  float slidery = height - 150;
   float sliderwidth = 25;
   float sliderheight  = 15;
   
-  Throttle(int bar_height,int bar_width,int x,int y)
+  Throttle(int bar_height,int bar_width,int posx,int posy)
   {
     this.bar_height = bar_height;
     this.bar_width = bar_width;
-    posx = x;
-    posy = y;
+    this.posx = posx;
+    this.posy = posy;
   }
   
   void render()
@@ -39,6 +39,7 @@ class Throttle
         && mouseY > posy && mouseY < posy + bar_height)
     {
       slidery = mouseY -5;
+      ship_speed = map(slidery,bar_height,posy,0,1000);
     }
     
     textSize(25);
