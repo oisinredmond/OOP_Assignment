@@ -6,7 +6,7 @@ class Throttle
   int posx;
   int posy;
   float sliderx = width-125;
-  float slidery = height - 150;
+  float slidery = height - 400;
   float sliderwidth = 25;
   float sliderheight  = 15;
   
@@ -35,11 +35,11 @@ class Throttle
     fill(0,255,0);
     rect(sliderx,slidery,sliderwidth,sliderheight);
     
-    if(mousePressed && mouseX > throttle.sliderx && mouseX < throttle.sliderx+throttle.sliderwidth && mouseY > throttle.slidery && mouseY < throttle.slidery+throttle.sliderheight
-        && mouseY > posy && mouseY < posy + bar_height)
+    if(mousePressed && mouseX > throttle.sliderx && mouseX < throttle.sliderx+throttle.sliderwidth && mouseY > throttle.slidery -20 && mouseY < throttle.slidery+throttle.sliderheight
+       +20 && mouseY > posy && mouseY < posy + bar_height)
     {
       slidery = mouseY -5;
-      ship_speed = map(slidery,bar_height,posy,0,1000);
+      ship_speed = map(mouseY,bar_height+posy,posy,0,1000);
     }
     
     textSize(25);
