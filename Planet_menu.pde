@@ -37,12 +37,19 @@ class Planet_menu
     }
     shape(earth);
     popMatrix();
+    
     pushMatrix();
     translate(px,py,0);
     mars = createShape(SPHERE,radius);
     mars.setTexture(marstexture);
+    mars.rotateX(-0.5);
+    if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
+    {
+      mars.rotateY(mouseX*(-0.04));
+    }
     shape(mars);
     popMatrix();
+    
     pushMatrix();
     translate(px + 200,py,0);
     jupiter = createShape(SPHERE,radius);
