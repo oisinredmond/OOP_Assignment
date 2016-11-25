@@ -30,6 +30,11 @@ class Planet_menu
     translate(px - 200,py,0);
     earth = createShape(SPHERE,radius);
     earth.setTexture(earthtexture);
+    earth.rotateX(-0.5);
+    if(mouseX > (width/2)-300 && mouseX < (width/2)-100 && mouseY < 140 && mouseY > 10)
+    {
+      earth.rotateY(mouseX*(-0.04));
+    }
     shape(earth);
     popMatrix();
     pushMatrix();
