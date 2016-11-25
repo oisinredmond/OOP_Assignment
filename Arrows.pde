@@ -7,6 +7,7 @@ class Arrows
   {
     stroke(255,0,0);
     strokeWeight(2);
+    
     if(ship_speed > 800.0)
     {
       k = 15;
