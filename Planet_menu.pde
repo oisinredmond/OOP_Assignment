@@ -9,7 +9,7 @@ class Planet_menu
   PImage jupitertexture = loadImage("2.jpg");
   PShape earth;
   PShape mars;
-  PShape mercury;
+  PShape jupiter;
   
   Planet_menu(float px,float py,float pz,float radius)
   {
@@ -25,19 +25,24 @@ class Planet_menu
     rect((width/2)-300,10,200,130);
     rect((width/2)+100,10,200,130);
     
-    pushMatrix();
     noStroke();
+    pushMatrix();
     translate(px - 200,py,0);
     earth = createShape(SPHERE,radius);
     earth.setTexture(earthtexture);
     shape(earth);
     popMatrix();
     pushMatrix();
-    noStroke();
     translate(px,py,0);
     mars = createShape(SPHERE,radius);
     mars.setTexture(marstexture);
     shape(mars);
+    popMatrix();
+    pushMatrix();
+    translate(px + 200,py,0);
+    jupiter = createShape(SPHERE,radius);
+    jupiter.setTexture(jupitertexture);
+    shape(jupiter);
     popMatrix();
   }
 }
