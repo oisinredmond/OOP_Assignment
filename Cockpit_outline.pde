@@ -2,7 +2,6 @@ class Cockpit_outline
 {
   void render()
   {
-    image(bg_earth,0,0);
     stroke(200);
     strokeWeight(1);
     fill(45);

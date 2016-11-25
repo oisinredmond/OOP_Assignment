@@ -16,14 +16,14 @@ void setup()
   planet_menu = new Planet_menu(width/2,80,0,50);
   
   pg = createGraphics(width, height);
-  bg_earth = loadImage("maxresdefault.jpg");  
+  background = loadImage("maxresdefault.jpg");  
   
   smooth();
   background(0);
 }
 
 PGraphics pg;
-PImage bg_earth;
+PImage background;
 float ship_speed = 500;
 
 Cockpit_outline cockpit;
@@ -39,6 +39,8 @@ Planet_menu planet_menu;
 void draw()
 {
   textAlign(LEFT);
+  
+  image(background,0,0);
   cockpit.render();
   fuelbar.render();
   arrows.render();
