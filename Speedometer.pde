@@ -17,8 +17,16 @@ class Speedometer
   void update()
   {
     speed = ship_speed;
+  }
+  
+  void render()
+  {
+    stroke(255,0,0);
+    textSize(23);
     rect(posx,posy,sizex,sizey);
-    textSize(20);
-    text(ship_speed,posx+20,posy+50);
+    text("m/s",posx+sizex+10,posy+35);
+    text("Orbital Speed",posx+5,posy-10);
+    stroke(0,255,0);
+    text(speed,posx+10,posy+35);
   }
 }

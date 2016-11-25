@@ -12,7 +12,7 @@ void setup()
   planet = new Planet(width/2,height-80,0,50);
   fuelbar = new Fuelbar(300,50,60,height-450);
   throttle = new Throttle(300,50,width-100,height-550);
-  speedometer = new Speedometer(100,100,100,50);
+  speedometer = new Speedometer(width/2 -500,height -100,150,70);
   
   pg = createGraphics(width, height);
   bgimage = loadImage("maxresdefault.jpg");  
@@ -47,5 +47,6 @@ void draw()
   throttle.render();
   planet.render();
   planet.planetInfo();
+  speedometer.render();
   speedometer.update();
 }
