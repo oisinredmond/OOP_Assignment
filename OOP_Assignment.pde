@@ -37,6 +37,7 @@ Speedometer speedometer;
 void draw()
 {
   image(bgimage,0,0);
+  textAlign(LEFT);
   cockpit.render();
   fuelbar.render();
   arrows.render();

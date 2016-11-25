@@ -39,20 +39,22 @@ class Planet
     {
       stroke(0,255,0);
       textSize(14);
-      text("Name:Earth",mouseX+85,mouseY-50);
-      text("Galaxy:Milkyway",mouseX+85,mouseY-38);
-      text("Diameter:12,742km",mouseX+85,mouseY-26);
-      text("Star:Sol",mouseX+85,mouseY-14);
-      text("Population:7 Billion",mouseX+85,mouseY-2);
-      text("Atmosphere:78% Nitrogen",mouseX+85,mouseY+10);
-      text("           21% Oxygen",mouseX+85,mouseY+22);
-      text("           0.03% CO2",mouseX+85,mouseY+34);
+      int rectx = mouseX + 80;
+      int recty = mouseY - 60;
+      rect(rectx,recty,200,100);
+      text("Name:Earth",rectx + 5,recty + 10);
+      text("Galaxy:Milkyway",rectx + 5,recty + 22);
+      text("Diameter:12,742km",rectx + 5,recty + 34);
+      text("Star:Sol",rectx + 5,recty + 46);
+      text("Population:7 Billion",rectx + 5,recty + 58);
+      text("Atmosphere:78% Nitrogen",rectx + 5,recty + 70);
+      text("           21% Oxygen",rectx + 5,recty + 82);
+      text("           0.03% CO2",rectx + 5,recty + 94);
       stroke(255,0,0);
       ellipse(mouseX,mouseY,3,3);
       line(mouseX,mouseY,mouseX+30,mouseY);
       line(mouseX+30,mouseY,mouseX+60,mouseY-20);
       line(mouseX+60,mouseY-20,mouseX+80,mouseY-20);
-      rect(mouseX+80,mouseY-60,200,100);
     }
   }
 }
