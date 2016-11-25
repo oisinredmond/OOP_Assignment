@@ -26,6 +26,13 @@ PGraphics pg;
 PImage background;
 float ship_speed = 500;
 
+String planet_name = "Earth";
+String planet_galaxy = "Milkyway";
+String planet_pop = "7 Billion";
+String planet_diam = "12,742km";
+String planet_star = "Sol";
+String planet_hab;
+
 Cockpit_outline cockpit;
 Arrows arrows;
 Crosshair crosshair;

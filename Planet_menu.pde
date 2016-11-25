@@ -70,6 +70,11 @@ class Planet_menu
       rect((width/2)-240,170,80,25);
       stroke(0,255,0);
       text("EARTH",(width/2)-235,190);
+      
+      if(mousePressed)
+      {
+        background = loadImage("maxresdefault.jpg");
+      }
     }
     
     if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
@@ -79,6 +84,11 @@ class Planet_menu
       rect((width/2)-40,170,80,25);
       stroke(0,255,0);
       text("MARS",(width/2)-35,190);
+      
+      if(mousePressed)
+      {
+        background = loadImage("mars_bg.jpg");
+      }
     }
     
     if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
@@ -88,6 +98,11 @@ class Planet_menu
       rect((width/2)+160,170,100,25);
       stroke(0,255,0);
       text("JUPITER",(width/2)+160,190);
+      
+      if(mousePressed)
+      {
+        background = loadImage("jupiter-1.jpg");
+      }
     }
   }
 }
