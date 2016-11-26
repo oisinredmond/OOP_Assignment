@@ -38,6 +38,8 @@ PImage globetexture;
 float ship_speed = 500;
 float pressure = 0.1;
 float gravity = 9.807;
+float fuel_height;
+int no_fuel = 0;
 
 String planet_name = "Earth";
 String planet_pop = "7 Billion";

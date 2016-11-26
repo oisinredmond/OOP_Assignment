@@ -4,7 +4,6 @@ class Fuelbar
   float bar_width;
   int posx;
   int posy;
-  float fuel_height;
   float fuel_loss;
   
   Fuelbar(int bar_height,int bar_width,int posx,int posy)
@@ -35,15 +34,25 @@ class Fuelbar
     {
         if(frameCount % 60 <= 30)
         {
-          text("FUEL EMPTY",(width/2) - 85,height/2 - 40);
+          fill(255,0,0);
+          text("FUEL EMPTY",(width/2) - 85,(height/2) - 80);
           noFill();
+          stroke(255,255,0);
           rect(posx-5,posy-5,bar_width+10,bar_height+10);
           rect(posx-10,posy-10,bar_width+20,bar_height+20);
           fill(255,0,0);
         }
         
-        fill(255,0,0);
+        fill(255,255,0);
         rect(posx -20,posy-50,100,30);
+        fill(0);
+        text("REFUEL",posx-15,posy-30);
+        
+        if(mousePressed && mouseX > posx - 20 && mouseX < posx+80 && mouseY > posy-50 && mouseY < posy - 20)
+        {
+          fuel_height = bar_height;
+          no_fuel = 0;
+        }
     }
     
     for(float i = fuel_height; i > 0; i--)

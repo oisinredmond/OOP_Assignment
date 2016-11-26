@@ -81,7 +81,7 @@ class Planet_menu
       fill(0,255,0);
       text("EARTH",(width/2)-235,190);
       
-      if(mousePressed)
+      if(mousePressed && fuel_height > 0)
       {
         background = earthbg;
         globetexture = earthtexture;
@@ -96,6 +96,10 @@ class Planet_menu
         gravity = 9.807;
         pressure = 0.1;
       }
+      else if(mousePressed && fuel_height <= 0)
+      {
+        no_fuel = 1;
+      }
     }
     
     if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
@@ -108,7 +112,7 @@ class Planet_menu
       fill(0,255,0);
       text("MARS",(width/2)-35,190);
       
-      if(mousePressed)
+      if(mousePressed && fuel_height > 0)
       {
         background = marsbg;
         globetexture = marstexture;
@@ -123,6 +127,10 @@ class Planet_menu
         gravity = 3.711;
         pressure = 0.03;
       }
+      else if(mousePressed && fuel_height <= 0)
+      {
+        no_fuel = 1;
+      }
     }
     
     if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
@@ -136,7 +144,7 @@ class Planet_menu
       text("JUPITER",(width/2)+160,190);
       
 
-      if(mousePressed)
+      if(mousePressed && fuel_height > 0)
       {
           background = jupiterbg;
           globetexture = jupitertexture;
@@ -151,6 +159,17 @@ class Planet_menu
           gravity = 24.79 ;
           pressure = 100;
       }
+      else if(mousePressed && fuel_height <= 0)
+      {
+        no_fuel = 1;
+      }
+    }
+    
+    if(no_fuel ==1 && frameCount % 60 <= 30)
+    {
+      textSize(25);
+      fill(255,0,0);
+      text("PLEASE REFUEL TO TRAVEL",(width/2)-150,(height/2)-40);
     }
   }
 }
