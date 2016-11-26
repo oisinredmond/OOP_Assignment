@@ -1,6 +1,15 @@
+import ddf.minim.*;
+Minim minim;
+AudioPlayer music;
+
 void setup()
 {
-  fullScreen(P3D);  
+  size(1280,720,P3D); 
+  
+  minim = new Minim(this);
+  music = minim.loadFile("Ambient Space Music.mp3");
+  //music.play();
+  
   PFont font;
   font = loadFont("OCRAExtended-48.vlw");
   textFont(font);
@@ -10,9 +19,9 @@ void setup()
   radar = new Radar(width-100,height-90,70,0.05f);
   crosshair = new Crosshair(width/2.0f,height/2.0f,60,0.05);
   planet = new Planet(width/2,height-80,0,50);
-  fuelbar = new Fuelbar(300,50,60,height-(height/2));
-  throttle = new Throttle(300,50,width-100,height-(height/2)-100);
-  speedometer = new Speedometer(width/2 -500,height -100,150,70);
+  fuelbar = new Fuelbar(300,50,60,height/2-100);
+  throttle = new Throttle(300,50,width-100,height/2 - 200);
+  speedometer = new Speedometer(width/2 -450,height -120,90,25);
   planet_menu = new Planet_menu(width/2,80,0,50);
   
   pg = createGraphics(width, height);
@@ -20,13 +29,14 @@ void setup()
   globetexture = loadImage("earthmap1k.jpg");
   
   smooth();
-  background(0);
 }
 
 PGraphics pg;
 PImage background;
 PImage globetexture;
 float ship_speed = 500;
+float pressure = 0.1;
+float gravity = 9.807;
 
 String planet_name = "Earth";
 String planet_pop = "7 Billion";
@@ -60,6 +70,5 @@ void draw()
   planet.render();
   planet.planetInfo();
   speedometer.render();
-  speedometer.update();
   planet_menu.render();
 }

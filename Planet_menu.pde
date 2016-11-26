@@ -66,6 +66,7 @@ class Planet_menu
     popMatrix();
     
     stroke(255,0,0);
+    textSize(20);
     if(mouseX > (width/2)-300 && mouseX < (width/2)-100 && mouseY < 140 && mouseY > 10)
     {
       ellipse((width/2)-200,140,3,3);
@@ -82,6 +83,8 @@ class Planet_menu
         planet_pop = "7 Billion";
         planet_diam = "12,742km";
         planet_hab = "100%";
+        gravity = 9.807;
+        pressure = 0.1;
       }
     }
     
@@ -101,6 +104,8 @@ class Planet_menu
         planet_pop = "10 Million";
         planet_diam = "6,779 km";
         planet_hab = "20%";
+        gravity = 3.711;
+        pressure = 0.03;
       }
     }
     
@@ -121,6 +126,8 @@ class Planet_menu
           planet_pop = "0";
           planet_diam = "6,779 km";
           planet_hab = "0%";
+          gravity = 24.79 ;
+          pressure = 100;
       }
     }
   }

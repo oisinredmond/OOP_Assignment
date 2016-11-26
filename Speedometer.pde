@@ -1,6 +1,5 @@
 class Speedometer
 {
-  float speed;
   int posx;
   int posy;
   int sizex;
@@ -14,19 +13,26 @@ class Speedometer
     this.sizey = sizey;
   }
   
-  void update()
-  {
-    speed = ship_speed;
-  }
   
   void render()
   {
     stroke(255,0,0);
-    textSize(23);
+    textSize(16);
     rect(posx,posy,sizex,sizey);
-    text("m/s",posx+sizex+10,posy+35);
-    text("Orbital Speed",posx+5,posy-10);
-    stroke(0,255,0);
-    text(speed,posx+10,posy+35);
+    text(ship_speed,posx+2,posy+15);
+    text("m/s",posx+sizex+5,posy+15);
+    text("Orbital Speed",posx,posy-5);
+    
+    rect(posx,posy + 45,sizex,sizey);
+    text(pressure,posx+2,posy+65);
+    text("kPa",posx+sizex+5,posy+65);
+    text("Atmos. Pressure",posx,posy+40);
+    
+    rect(posx,posy+90,sizex,sizey);
+    text(gravity,posx+2,posy+110);
+    text("m/s",posx+sizex+5,posy+110);
+    text("Gravity",posx,posy+85);
+    textSize(10);
+    text("2",posx+sizex+35,posy+100);
   }
 }
