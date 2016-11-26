@@ -7,7 +7,7 @@ class Throttle
   int posy;
   float sliderx = width-125;
   float slidery = height - 400;
-  float sliderwidth = 25;
+  float sliderwidth = 100;
   float sliderheight  = 15;
   
   Throttle(int bar_height,int bar_width,int posx,int posy)
@@ -22,7 +22,6 @@ class Throttle
   {
     stroke(255,0,0);
     noFill();
-    
     rect(posx,posy,bar_width,bar_height);
     
     for(int i =bar_height;i>0;i--)
@@ -31,16 +30,17 @@ class Throttle
       stroke(255,0,j);
       line(posx,posy + bar_height -i,posx + bar_width,posy + bar_height -i);
     }
-    
-    fill(0,255,0);
-    rect(sliderx,slidery,sliderwidth,sliderheight);
-    
+   
     if(mousePressed && mouseX > throttle.sliderx && mouseX < throttle.sliderx+throttle.sliderwidth && mouseY > throttle.slidery -20 && mouseY < throttle.slidery+throttle.sliderheight
        +20 && mouseY > posy && mouseY < posy + bar_height)
     {
       slidery = mouseY -5;
       ship_speed = map(slidery,bar_height+posy,posy,0,1000);
     }
+    
+    fill(0,255,0);
+    stroke(0,150,150);
+    rect(sliderx,slidery,sliderwidth,sliderheight);
     
     textSize(25);
     fill(0,255,0);
