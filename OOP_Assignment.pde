@@ -34,6 +34,7 @@ void setup()
 PGraphics pg;
 PImage background;
 PImage globetexture;
+
 float ship_speed = 500;
 float pressure = 0.1;
 float gravity = 9.807;
@@ -43,6 +44,7 @@ String planet_pop = "7 Billion";
 String planet_diam = "12,742km";
 String planet_hab = "100%";
 String planet_gravity = "9.8 m/s^1";
+String planet_mass = "5.9736x10^24 kg";
 
 Cockpit_outline cockpit;
 Arrows arrows;
@@ -59,16 +61,16 @@ void draw()
   textAlign(LEFT);
   
   image(background,0,0);
+  planet_menu.render();
   cockpit.render();
   fuelbar.render();
   arrows.render();
   radar.update();
   radar.render();
+  planet.render();
+  planet.planetInfo();
   crosshair.update();
   crosshair.render();
   throttle.render();
-  planet.render();
-  planet.planetInfo();
   speedometer.render();
-  planet_menu.render();
 }

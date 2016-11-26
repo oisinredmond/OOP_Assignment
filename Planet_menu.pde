@@ -22,15 +22,13 @@ class Planet_menu
     this.radius = radius;
   }
   
+ 
   void render()
   {
-    rect((width/2)-100,10,200,130);
-    rect((width/2)-300,10,200,130);
-    rect((width/2)+100,10,200,130);
-    
+    fill(255,255,255);
     noStroke();
     pushMatrix();
-    translate(px - 200,py,0);
+    translate(px - 200,py,-10);
     earth = createShape(SPHERE,radius);
     earth.setTexture(earthtexture);
     earth.rotateX(-0.5);
@@ -65,14 +63,22 @@ class Planet_menu
     shape(jupiter);
     popMatrix();
     
+    fill(0);
     stroke(255,0,0);
+    rect((width/2)-100,10,200,130);
+    rect((width/2)-300,10,200,130);
+    rect((width/2)+100,10,200,130);
+    
     textSize(20);
     if(mouseX > (width/2)-300 && mouseX < (width/2)-100 && mouseY < 140 && mouseY > 10)
     {
+      stroke(255,0,0);
+      fill(0);
+      rect((width/2)-240,170,80,25);
       ellipse((width/2)-200,140,3,3);
       line((width/2)-200,140,(width/2)-200,170);
       rect((width/2)-240,170,80,25);
-      stroke(0,255,0);
+      fill(0,255,0);
       text("EARTH",(width/2)-235,190);
       
       if(mousePressed)
@@ -83,6 +89,7 @@ class Planet_menu
         planet_pop = "7 Billion";
         planet_diam = "12,742km";
         planet_hab = "100%";
+        planet_mass = "5.974x10^24 kg";
         gravity = 9.807;
         pressure = 0.1;
       }
@@ -90,10 +97,12 @@ class Planet_menu
     
     if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
     {
+      stroke(255,0,0);
+      fill(0);
       ellipse(width/2,140,3,3);
       line(width/2,140,width/2,170);
       rect((width/2)-40,170,80,25);
-      stroke(0,255,0);
+      fill(0,255,0);
       text("MARS",(width/2)-35,190);
       
       if(mousePressed)
@@ -104,6 +113,7 @@ class Planet_menu
         planet_pop = "10 Million";
         planet_diam = "6,779 km";
         planet_hab = "20%";
+        planet_mass = "6.39×10^23 kg";
         gravity = 3.711;
         pressure = 0.03;
       }
@@ -111,10 +121,12 @@ class Planet_menu
     
     if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
     {
+      stroke(255,0,0);
+      fill(0);
       ellipse((width/2)+200,140,3,3);
       line((width/2)+200,140,(width/2)+200,170);
       rect((width/2)+160,170,100,25);
-      stroke(0,255,0);
+      fill(0,255,0);
       text("JUPITER",(width/2)+160,190);
       
 
@@ -126,6 +138,7 @@ class Planet_menu
           planet_pop = "0";
           planet_diam = "6,779 km";
           planet_hab = "0%";
+          planet_mass = "1.898×10^27 kg";
           gravity = 24.79 ;
           pressure = 100;
       }
