@@ -3,8 +3,8 @@ class Cockpit_outline
   void render()
   {
     stroke(200);
-    strokeWeight(1);
-    fill(45);
+    strokeWeight(3);
+    fill(0,30,80);
      
     beginShape();
     vertex(0,0);

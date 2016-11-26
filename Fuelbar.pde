@@ -28,7 +28,7 @@ class Fuelbar
     
     if(fuel_height > 0)
     {
-      fuel_height = fuel_height - (0.5*fuel_loss);
+      fuel_height = fuel_height - (0.17*fuel_loss);
     }
     else
     {

@@ -1,14 +1,12 @@
-import ddf.minim.*;
-Minim minim;
-AudioPlayer music;
+import processing.sound.*;
+SoundFile file;
 
 void setup()
 {
   size(1280,720,P3D); 
   
-  minim = new Minim(this);
-  music = minim.loadFile("Ambient Space Music.mp3");
-  //music.play();
+  file = new SoundFile(this, "sample.mp3");
+  file.play();
   
   PFont font;
   font = loadFont("OCRAExtended-48.vlw");
@@ -23,6 +21,7 @@ void setup()
   throttle = new Throttle(300,50,width-100,height/2 - 200);
   speedometer = new Speedometer(width/2 -450,height -120,90,25);
   planet_menu = new Planet_menu(width/2,80,0,50);
+  engine_temp = new Engine_temp(30,110,(width/2)-230,height-130);
   
   pg = createGraphics(width, height);
   background = loadImage("maxresdefault.jpg");  
@@ -60,6 +59,7 @@ Fuelbar fuelbar;
 Throttle throttle;
 Speedometer speedometer;
 Planet_menu planet_menu;
+Engine_temp engine_temp;
 
 void draw()
 {
@@ -78,4 +78,5 @@ void draw()
   crosshair.render();
   throttle.render();
   speedometer.render();
+  engine_temp.render();
 }
