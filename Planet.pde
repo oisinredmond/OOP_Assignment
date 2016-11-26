@@ -49,12 +49,16 @@ class Planet
     
     stroke(0,255,0);
     fill(0,255,0);
-    text("Name: " + planet_name,rectx + 5,recty + 10);
-    text("Galaxy: Milkyway",rectx + 5,recty + 22);
-    text("Diameter: " + planet_diam,rectx + 5,recty + 34);
-    text("Star: Sol",rectx + 5,recty + 46);
-    text("Population: " + planet_pop,rectx + 5,recty + 58);
-    text("Habitability: " + planet_hab,rectx + 5,recty + 70);
-    text("Mass: "+planet_mass,rectx+5,recty+82);
+    text("Name: " + planet_name,rectx + 5,recty + 12);
+    text("Galaxy: Milkyway",rectx + 5,recty + 24);
+    text("Diameter: " + planet_diam,rectx + 5,recty + 36);
+    text("Star: Sol",rectx + 5,recty + 48);
+    text("Population: " + planet_pop,rectx + 5,recty + 60);
+    text("Habitability: " + planet_hab,rectx + 5,recty + 72);
+    text("Mass: "+planet_mass,rectx+5,recty+84);
+    text(planet_gas1,rectx+5,recty+96);
+    text(planet_gas2,rectx+5,recty+108);
+    text(planet_gas3,rectx+5,recty+120);
+
   }
 }

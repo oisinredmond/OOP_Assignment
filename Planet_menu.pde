@@ -90,6 +90,9 @@ class Planet_menu
         planet_diam = "12,742km";
         planet_hab = "100%";
         planet_mass = "5.974x10^24 kg";
+        planet_gas1 = "78% Nitrogen";
+        planet_gas2 = "21% Oxygen";
+        planet_gas3 = "0.03% CO2";
         gravity = 9.807;
         pressure = 0.1;
       }
@@ -114,6 +117,9 @@ class Planet_menu
         planet_diam = "6,779 km";
         planet_hab = "20%";
         planet_mass = "6.39×10^23 kg";
+        planet_gas1 = "96% CO2";
+        planet_gas2 = "1.9% Argon";
+        planet_gas3 = "1.9% Nitrogen";
         gravity = 3.711;
         pressure = 0.03;
       }
@@ -139,6 +145,9 @@ class Planet_menu
           planet_diam = "6,779 km";
           planet_hab = "0%";
           planet_mass = "1.898×10^27 kg";
+          planet_gas1 = "90% Hydrogen";
+          planet_gas2 = "10% Helium";
+          planet_gas3 = "0.07% Methane";
           gravity = 24.79 ;
           pressure = 100;
       }

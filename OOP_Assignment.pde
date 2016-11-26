@@ -45,6 +45,9 @@ String planet_diam = "12,742km";
 String planet_hab = "100%";
 String planet_gravity = "9.8 m/s^1";
 String planet_mass = "5.9736x10^24 kg";
+String planet_gas1 = "78% Nitrogen";
+String planet_gas2 = "21% Oxygen";
+String planet_gas3 = "0.03% CO2";
 
 Cockpit_outline cockpit;
 Arrows arrows;
