@@ -22,7 +22,7 @@ class Fuelbar
     rect(posx,posy,bar_width,bar_height);
     textSize(25);
     fill(0,255,0);
-    text("FUEL",posx,posy + bar_height + 40);
+    text("FUEL",posx -5,posy + bar_height + 40);
     
     fuel_loss = map(ship_speed,0,1000,0,1);
     

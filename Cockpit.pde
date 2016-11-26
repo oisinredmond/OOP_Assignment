@@ -1,4 +1,4 @@
-class Cockpit_outline
+class Cockpit
 {
   void render()
   {
@@ -30,5 +30,22 @@ class Cockpit_outline
     line(width,height-210,width-210,height-160);
     line(width-210,height-160,200,height-160);
     line(200,height-160,0,height-10);
+    
+    if(begin==0)
+    {
+      textAlign(CENTER);
+      textSize(50);
+      stroke(100);
+      fill(0,30,80);
+      rect(width/2-100,height/2+50,200,60);
+      fill(0,200,0);
+      text("SPACE TRAVEL SIMULATOR 2016",width/2,height/2);
+      text("BEGIN",width/2,height/2+100);
+      
+      if(mousePressed && mouseX > width/2-100 && mouseX < width/2 + 100 && mouseY > height/2 + 50 && mouseY < height/2 + 110)
+      {
+        begin = 1;
+      }
+    }
   }
 }
