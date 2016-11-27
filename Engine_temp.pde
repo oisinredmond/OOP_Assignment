@@ -19,17 +19,17 @@ class Engine_temp
   {
     noFill();
     textSize(16);
-    temp  = map(ship_speed,0,1000,0,100);
+    temp  = map(ship_speed, 0, 1000, 0, 100);
     temp += random(0,3);
     rect(posx,posy,bar_width,bar_height);
-    text("ENGINE TEMP (C)",posx - 40,posy+bar_height+13);
+    text("ENGINE TEMP (C)",posx - 40,posy + bar_height + 13);
     text(temp,posx-15,posy-5);
     
     if(temp > 90 && frameCount % 10 <= 5)
     {
       stroke(255,0,0);
       strokeWeight(2);
-      rect(posx-5,posy-5,bar_width + 10,bar_height+10);
+      rect(posx - 5,posy - 5,bar_width + 10,bar_height + 10);
       strokeWeight(1);
     }
     
@@ -37,7 +37,7 @@ class Engine_temp
     {
       j = map(i,0,bar_height,0,255);
       stroke(255,j,0);
-      line(posx,posy+bar_height - i,posx + bar_width,posy + bar_height - i);
+      line(posx,posy + bar_height - i,posx + bar_width,posy + bar_height - i);
     }
   }
 }

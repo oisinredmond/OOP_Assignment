@@ -24,17 +24,17 @@ class Throttle
     noFill();
     rect(posx,posy,bar_width,bar_height);
     
-    for(int i =bar_height;i>0;i--)
+    for(int i = bar_height; i > 0; i--)
     {
       float j = map(i,0,bar_height,0,255);
       stroke(255,0,j);
-      line(posx,posy + bar_height -i,posx + bar_width,posy + bar_height -i);
+      line(posx,posy + bar_height - i,posx + bar_width,posy + bar_height -i);
     }
    
-    if(mousePressed && mouseX > throttle.sliderx && mouseX < throttle.sliderx+throttle.sliderwidth && mouseY > throttle.slidery -20 && mouseY < throttle.slidery+throttle.sliderheight
+    if(mousePressed && mouseX > sliderx && mouseX < sliderx + sliderwidth && mouseY > slidery - 20 && mouseY < slidery + sliderheight
        +20 && mouseY > posy && mouseY < posy + bar_height)
     {
-      slidery = mouseY -5;
+      slidery = mouseY - 5;
       ship_speed = map(slidery,bar_height+posy,posy,0,1000);
     }
     
@@ -44,6 +44,6 @@ class Throttle
     
     textSize(25);
     fill(0,255,0);
-    text("THROTTLE",posx-30,posy-10);
+    text("THROTTLE",posx - 30,posy - 10);
   }
 }

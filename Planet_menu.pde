@@ -14,7 +14,6 @@ class Planet_menu
   PImage venusbg = loadImage("venusbg.jpg");
   
   PShape earth,mars,jupiter,moon,venus;
-
   
   Planet_menu(float px,float py,float pz,float radius)
   {
@@ -24,19 +23,19 @@ class Planet_menu
     this.radius = radius;
   }
   
- 
   void render()
   {
     fill(255,255,255);
     noStroke();
+    
     pushMatrix();
     translate(px - 200,py,-10);
     earth = createShape(SPHERE,radius);
     earth.setTexture(earthtexture);
     earth.rotateX(-0.5);
-    if(mouseX > (width/2)-300 && mouseX < (width/2)-100 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) - 300 && mouseX < (width / 2) - 100 && mouseY < 140 && mouseY > 10)
     {
-      earth.rotateY(mouseX*(-0.04));
+      earth.rotateY(mouseX * (-0.04));
     }
     shape(earth);
     popMatrix();
@@ -46,9 +45,9 @@ class Planet_menu
     mars = createShape(SPHERE,radius);
     mars.setTexture(marstexture);
     mars.rotateX(-0.5);
-    if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) - 100 && mouseX < (width / 2) + 100 && mouseY < 140 && mouseY > 10)
     {
-      mars.rotateY(mouseX*(-0.04));
+      mars.rotateY(mouseX * (-0.04));
     }
     shape(mars);
     popMatrix();
@@ -58,9 +57,9 @@ class Planet_menu
     jupiter = createShape(SPHERE,radius);
     jupiter.setTexture(jupitertexture);
     jupiter.rotateX(-0.5);
-    if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2)  + 100 && mouseX < (width / 2) + 300 && mouseY < 140 && mouseY > 10)
     {
-      jupiter.rotateY(mouseX*(-0.05));
+      jupiter.rotateY(mouseX * (-0.05));
     }
     shape(jupiter);
     popMatrix();
@@ -70,9 +69,9 @@ class Planet_menu
     moon = createShape(SPHERE,radius);
     moon.setTexture(moontexture);
     moon.rotateX(-0.5);
-    if(mouseX > (width/2)+300 && mouseX < (width/2)+500 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) + 300 && mouseX < (width / 2) + 500 && mouseY < 140 && mouseY > 10)
     {
-      moon.rotateY(mouseX*(-0.05));
+      moon.rotateY(mouseX * (-0.05));
     }
     shape(moon);
     popMatrix();
@@ -82,32 +81,33 @@ class Planet_menu
     venus = createShape(SPHERE,radius);
     venus.setTexture(venustexture);
     venus.rotateX(-0.5);
-    if(mouseX > (width/2)-500 && mouseX < (width/2)-300 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) - 500 && mouseX < (width / 2) - 300 && mouseY < 140 && mouseY > 10)
     {
-      venus.rotateY(mouseX*(-0.05));
+      venus.rotateY(mouseX * (-0.05));
     }
     shape(venus);
     popMatrix();
     
     fill(0);
     stroke(255,0,0);
-    rect((width/2)-500,10,200,130);
-    rect((width/2)-100,10,200,130);
-    rect((width/2)-300,10,200,130);
-    rect((width/2)+100,10,200,130);
-    rect((width/2)+300,10,190,130);
+    rect((width / 2) - 500,10,200,130);
+    rect((width / 2) - 100,10,200,130);
+    rect((width / 2) - 300,10,200,130);
+    rect((width / 2) + 100,10,200,130);
+    rect((width / 2) + 300,10,190,130);
     
     stroke(255,0,0);
     fill(0);
     textSize(20);
-    if(mouseX > (width/2)-300 && mouseX < (width/2)-100 && mouseY < 140 && mouseY > 10)
+    
+    if(mouseX > (width / 2) - 300 && mouseX < (width / 2) - 100 && mouseY < 140 && mouseY > 10)
     {
-      rect((width/2)-240,170,80,25);
-      ellipse((width/2)-200,140,3,3);
-      line((width/2)-200,140,(width/2)-200,170);
-      rect((width/2)-240,170,80,25);
+      rect((width / 2) - 240,170,80,25);
+      ellipse((width / 2) - 200,140,3,3);
+      line((width / 2) - 200,140,(width / 2) - 200,170);
+      rect((width / 2) - 240,170,80,25);
       fill(0,255,0);
-      text("EARTH",(width/2)-235,190);
+      text("EARTH",(width / 2) - 235,190);
       
       if(mousePressed && fuel_height > 0)
       {
@@ -130,13 +130,13 @@ class Planet_menu
       }
     }
     
-    if(mouseX > (width/2)-100 && mouseX < (width/2)+100 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) - 100 && mouseX < (width / 2) + 100 && mouseY < 140 && mouseY > 10)
     {
-      ellipse(width/2,140,3,3);
-      line(width/2,140,width/2,170);
-      rect((width/2)-40,170,80,25);
+      ellipse(width / 2,140,3,3);
+      line(width / 2,140,width / 2,170);
+      rect((width / 2) - 40,170,80,25);
       fill(0,255,0);
-      text("MARS",(width/2)-35,190);
+      text("MARS",(width / 2) - 35,190);
       
       if(mousePressed && fuel_height > 0)
       {
@@ -159,15 +159,14 @@ class Planet_menu
       }
     }
     
-    if(mouseX > (width/2)+100 && mouseX < (width/2)+300 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) + 100 && mouseX < (width / 2) + 300 && mouseY < 140 && mouseY > 10)
     {
-      ellipse((width/2)+200,140,3,3);
-      line((width/2)+200,140,(width/2)+200,170);
-      rect((width/2)+160,170,100,25);
+      ellipse((width / 2) + 200,140,3,3);
+      line((width / 2) + 200,140,(width / 2) + 200,170);
+      rect((width / 2) + 160,170,100,25);
       fill(0,255,0);
-      text("JUPITER",(width/2)+160,190);
+      text("JUPITER",(width / 2) + 160,190);
       
-
       if(mousePressed && fuel_height > 0)
       {
           background = jupiterbg;
@@ -189,14 +188,14 @@ class Planet_menu
       }
     }
     
-    if(mouseX > (width/2)-500 && mouseX < (width/2)-300 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) - 500 && mouseX < (width / 2) - 300 && mouseY < 140 && mouseY > 10)
     {
-      rect((width/2)-440,170,80,25);
-      ellipse((width/2)-400,140,3,3);
-      line((width/2)-400,140,(width/2)-400,170);
-      rect((width/2)-440,170,80,25);
+      rect((width / 2) - 440,170,80,25);
+      ellipse((width / 2) - 400,140,3,3);
+      line((width / 2) - 400,140,(width / 2) - 400,170);
+      rect((width / 2) - 440,170,80,25);
       fill(0,255,0);
-      text("VENUS",(width/2)-435,190);
+      text("VENUS",(width / 2) - 435,190);
       
       if(mousePressed && fuel_height > 0)
       {
@@ -219,13 +218,13 @@ class Planet_menu
       }
     }
     
-    if(mouseX > (width/2)+300 && mouseX < (width/2)+500 && mouseY < 140 && mouseY > 10)
+    if(mouseX > (width / 2) + 300 && mouseX < (width / 2) + 500 && mouseY < 140 && mouseY > 10)
     {
-      rect((width/2)+360,170,80,25);
-      ellipse((width/2)+400,140,3,3);
-      line((width/2)+400,140,(width/2)+400,170);
+      rect((width / 2)+360,170,80,25);
+      ellipse((width / 2)+400,140,3,3);
+      line((width / 2) + 400,140,(width / 2)+400,170);
       fill(0,255,0);
-      text("MOON",(width/2)+365,190);
+      text("MOON",(width / 2) + 365,190);
       
       if(mousePressed && fuel_height > 0)
       {
@@ -248,12 +247,11 @@ class Planet_menu
       }
     }
     
-    
-    if(no_fuel ==1 && frameCount % 60 <= 30)
+    if(no_fuel == 1 && frameCount % 60 <= 30)
     {
       textSize(25);
       fill(255,0,0);
-      text("PLEASE REFUEL TO TRAVEL",(width/2)-150,(height/2)-40);
+      text("PLEASE REFUEL TO TRAVEL",(width / 2) - 150,(height / 2) - 40);
     }
   }
 }
