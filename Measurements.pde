@@ -1,11 +1,11 @@
-class Speedometer
+class Measurements
 {
   int posx;
   int posy;
   int sizex;
   int sizey;
   
-  Speedometer(int x,int y,int sizex,int sizey)
+  Measurements(int x,int y,int sizex,int sizey)
   {
     posx = x;
     posy = y;
