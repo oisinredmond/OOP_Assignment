@@ -19,3 +19,5 @@ The UI contains the following features:
 - User's can choose a planet to travel to. The program's background will switch, and the planet displayed
   on the dashboard with change to whichever was selected. Info on the selected planet will show in the info box.
  
+NOTE: The dashboard textures in this program are designed for a 1366x768 screen. Running the program at a higher resolution
+      may cause the texture to be warped.
